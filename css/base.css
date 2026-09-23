@@ -1,0 +1,58 @@
+/* ==========================================================================
+   base.css — 变量 / reset / 通用
+   ========================================================================== */
+
+:root,
+:root[data-theme="light"] {
+  /* 色板（浅色） */
+  --paper:      #f4f1ea;   /* 纸白底色 */
+  --ink:        #1c1b18;   /* 主文字色 */
+  --ink-soft:   #6b665c;   /* 次级文字色 */
+  --line:       #d8d2c5;   /* 分割线 */
+  --accent:     #e4572e;   /* 强调橙红 */
+  --accent-2:   #1f6f8f;   /* 辅助蓝 */
+  --block:      #e8e2d2;   /* 浅色块 */
+
+  /* 字体 */
+  --font-serif: "Noto Serif SC", "Songti SC", serif;
+  --font-sans:  "Space Grotesk", "PingFang SC", "Microsoft YaHei", sans-serif;
+
+  /* 间距 */
+  --g: 24px;
+  --section-pad: clamp(72px, 12vw, 140px);
+
+  /* 排版尺 */
+  --h1: clamp(44px, 8vw, 96px);
+  --h2: clamp(30px, 4.5vw, 54px);
+  --h3: clamp(20px, 2.6vw, 28px);
+}
+
+:root[data-theme="dark"] {
+  /* 色板（深色） */
+  --paper:      #16150f;   /* 深色底 */
+  --ink:        #ece7db;   /* 主文字色 */
+  --ink-soft:   #a8a294;   /* 次级文字色 */
+  --line:       #36352e;   /* 分割线 */
+  --accent:     #ff6a3d;   /* 强调橙红 */
+  --accent-2:   #6fb7d4;   /* 辅助蓝 */
+  --block:      #221f18;   /* 深色块 */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+::selection { background: var(--accent); color: #fff; }

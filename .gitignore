@@ -1,0 +1,12 @@
+# 编辑器 / 系统文件
+.vscode/
+.idea/
+.trae/
+.DS_Store
+Thumbs.db
+*.log
+
+# 依赖与构建产物
+node_modules/
+dist/
+build/
